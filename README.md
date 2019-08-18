@@ -9,7 +9,7 @@ In all instances, the syntax is:
 
 &nbsp;&nbsp;&nbsp;&nbsp;<tt>raspi-config nonint [<i>raspi-config_function_name</i> [<i>args ...</i>]]</tt>
 
-## Functions I've tested:
+### Functions I've tested:
 ### Change timezone
 ```sh
 raspi-config nonint do_change_timezone "America/Denver"
@@ -34,7 +34,7 @@ raspi-config nonint do_wifi_country US
 ```
 For other country names see: <tt>/usr/shar/zoneinfo/iso3166.tab</tt>
 
-## Functions I've figured out, but not tested:
+### Functions I've figured out, but not tested:
 ### Change timezone
 ```sh
 raspi-config nonint do_wifi_ssid_passphrase "Your_SSID" "Your PassPhrase"
@@ -46,7 +46,7 @@ chmod 600 /etc/wpa_supplicant/wpa_supplicant.conf
 For other timezone names see: /usr/share/zoneinfo
 
 
-### Information on configuing a headless-Pi.
+## Information on configuing a headless-Pi.
 
 Start with the official information at: https://www.raspberrypi.org/documentation/configuration/wireless/headless.md
 
@@ -58,6 +58,7 @@ cd /path/to/boot/partition
 touch ssh
 cat > wpa_supplicant.conf <<EOF
 country=us
+update_config=1
 ctrl_interface=/var/run/wpa_supplicant
 
 network={

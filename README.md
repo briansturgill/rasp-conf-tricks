@@ -34,6 +34,11 @@ raspi-config nonint do_wifi_country US
 ```
 For other country names see: <tt>/usr/shar/zoneinfo/iso3166.tab</tt>
 
+### Expand root file system to use rest of sd card.
+```sh
+raspi-config --expand-rootfs
+```
+
 ### Functions I've figured out, but not tested:
 ### Change timezone
 ```sh

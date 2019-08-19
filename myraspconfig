@@ -1,0 +1,13 @@
+#!/bin/sh
+# This file must be executed with "sudo"
+curhost = `raspi-config nonint get_hostname`
+echo -n "Enter hostname: [$curhost]"
+read host
+raspi-config nonint do_change_locale en_US.UTF-8
+raspi-config nonint do_configure_keyboard us
+raspi-config nonint do_wifi_country US
+if [ "$host" != "" ]; then
+  raspi-config nonint do_hostname $host
+fi
+raspi-config --expand-rootfs
+echo 'Make sure you have used "passwd" to change the password for the user "pi".'

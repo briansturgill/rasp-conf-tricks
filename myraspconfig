@@ -1,6 +1,6 @@
 #!/bin/sh
 # This file must be executed with "sudo"
-curhost = `raspi-config nonint get_hostname`
+curhost=`raspi-config nonint get_hostname`
 echo -n "Enter hostname: [$curhost]"
 read host
 raspi-config nonint do_change_locale en_US.UTF-8

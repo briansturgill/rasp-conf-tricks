@@ -73,5 +73,5 @@ network={
 EOF
 ```
 
-If you want static addresses for your machines edit _ON_THE_ROOT_ (not BOOT), edit the file <tt>etc/dhcpd.conf</tt> and
+If you want static addresses for your machines edit _ON_THE_ROOT_PARTION_ [labeled rootfs] (not BOOT), the file <tt>etc/dhcpd.conf</tt> and
 add the required information as you normally would.

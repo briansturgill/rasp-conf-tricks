@@ -55,7 +55,9 @@ For other timezone names see: /usr/share/zoneinfo
 
 Start with the official information at: https://www.raspberrypi.org/documentation/configuration/wireless/headless.md
 
-Basically, after running etcher to build your sd card, remount the disks (remove and reinsert it).
+Basically, after running etcher to build your sd card, do the following:
+
+[If you cannot see the partions, <tt>boot</tt> and <tt>rootfs</tt> remount the disks (remove and reinsert sd card).]
 
 On the _BOOT_ partion:
 ```sh
@@ -73,5 +75,4 @@ network={
 EOF
 ```
 
-If you want static addresses for your machines edit _ON_THE_ROOT_PARTION_ [labeled rootfs] (not BOOT), the file <tt>etc/dhcpd.conf</tt> and
-add the required information as you normally would.
+If you want static addresses for your machines edit on _ROOTFS_ the file <tt>etc/dhcpcd.conf</tt> and add the required information as you normally would.
